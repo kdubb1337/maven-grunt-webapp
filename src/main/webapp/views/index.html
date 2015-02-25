@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" ng-app="App.App">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>My App</title>
+
+	<!-- build:css css/vendor.css -->
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+    <link href="../bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <!-- endbuild -->
+
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body ng-controller="RootCtrl">
+	<div ng-include="'app/root/navbar.html'"></div>
+	
+	<div ui-view></div>
+
+    <!-- build:js js/vendor.js -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) js/main.js -->
+    <script src="app/app.Module.js"></script>
+    <script src="app/app.Run.js"></script>
+    <script src="app/routes.Config.js"></script>
+
+    <script src="app/core/core.Module.js"></script>
+
+    <script src="app/root/root.Controller.js"></script>
+
+    <script src="app/home/home.Module.js"></script>
+    <script src="app/home/home.Controller.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "my-app",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "1.2.16",
+    "jquery": "2.1.1",
+    "bootstrap": "~3.3.1",
+    "fontawesome": "4.2.0",
+    "angular-cookies": "1.2.16",
+    "angular-sanitize": "1.2.16",
+    "angular-ui-router": "0.2.8"
+  },
+  "devDependencies": {
+  }
+}

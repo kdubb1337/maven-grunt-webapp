@@ -1,0 +1,8 @@
+/target
+/.settings
+/.classpath
+/.project
+/.tmp
+/node_modules
+/bower_components
+/target

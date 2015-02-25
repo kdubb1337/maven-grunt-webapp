@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" ng-app="App.Signin">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Sign In</title>
+
+	<!-- build:css css/vendor.css -->
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+	<link href="../bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet"/>
+    <!-- endbuild -->
+
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body ng-controller="SigninCtrl">
+	<div class="container">
+		<h1>Sign in:</h1>
+
+		<div class="col-sm-4">
+			<input class="form-control" placeholder="Username" ng-model="username" />
+			<input class="form-control" placeholder="Password" ng-model="password" type="password" />
+			<button class="btn btn-primary" ng-click="login()">Login</button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+
+	<!-- <div ng-include="'app/root/footer.html'"></div> -->
+
+
+    <!-- build:js js/vendor.js -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) js/signin.js -->
+    <script src="app/core/core.Module.js"></script>
+
+    <script src="app/signin/signin.Module.js"></script>
+    <script src="app/signin/signin.Controller.js"></script>
+    <!-- endbuild -->
+</body>
+</html>
