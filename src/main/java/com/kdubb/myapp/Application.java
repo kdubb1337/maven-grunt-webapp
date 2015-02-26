@@ -10,7 +10,8 @@ import org.springframework.boot.context.web.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.AbstractEnvironment;
 
-@EnableAutoConfiguration(exclude={ThymeleafAutoConfiguration.class})
+@EnableAutoConfiguration(exclude={ThymeleafAutoConfiguration.class, 
+		DataSourceAutoConfiguration.class})
 @ComponentScan
 public class Application extends SpringBootServletInitializer {
 	
