@@ -1,0 +1,13 @@
+mongo.db:
+  host: 
+  port: 
+  name: 
+  username: 
+  password: 
+
+mongo.db2:
+  host: 
+  port: 
+  name: 
+  username: 
+  password:

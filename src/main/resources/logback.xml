@@ -1,32 +1,20 @@
-<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="logback.xsd">
-	<contextName>LOCAL</contextName>
-	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>/logs/myApp-%date{YYYY-MM-dd HH:mm:ss}.log</file>
-		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
-			<fileNamePattern>/logs/pump-%date{YYYY-MM-dd HH:mm:ss}.%i.log.zip</fileNamePattern>
-			<minIndex>1</minIndex>
-			<maxIndex>9</maxIndex>
-		</rollingPolicy>
-		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
-			<maxFileSize>20MB</maxFileSize>
-		</triggeringPolicy>
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
 		<encoder>
-			<pattern>%date{YYYY-MM-dd HH:mm:ss} %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+			<pattern>%d %-5p %c{0}:%L - %m%n</pattern>
 		</encoder>
 	</appender>
 
-	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-		<encoder>
-			<pattern>%date{YYYY-MM-dd HH:mm:ss} %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
-		</encoder>
-	</appender>
-
-	<logger name="org.hibernate.SQL" additivity="false" level="DEBUG">
-		<appender-ref ref="STDOUT" />
+	<!-- Reduce Hibernate logging -->
+	<logger name="org.hibernate.SQL" level="DEBUG" additivity="false">
+		<appender-ref ref="CONSOLE" />
+	</logger>
+	<logger name="org.hibernate.type" level="INFO" additivity="false">
+		<appender-ref ref="CONSOLE" />
 	</logger>
 
 	<root level="INFO">
-		<appender-ref ref="FILE" />
-		<appender-ref ref="STDOUT" />
+		<appender-ref ref="CONSOLE" />
 	</root>
 </configuration>
